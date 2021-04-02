@@ -7,6 +7,47 @@
   font-family: 'Poppins', sans-serif;
 }
 
+:root {
+  --header-height: 3rem;
+  --body-color: #f5fffe;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--body-color);
+}
+
+.nav__link {
+  color: var(--first-color-dark);
+  font-weight: var(--font-medium);
+}
+
+.nav__item {
+  margin-bottom: 1.5rem;
+}
+
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 section {
   position: relative;
   min-height: 100vh;
@@ -27,25 +68,28 @@ section {
 }
 
 .promotext h3 {
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   line-height: 1;
 }
 
 .promotext p {
   font-size: 2.2rem;
   font-weight: 300;
-  margin-top: 40px;
+}
+
+.logbox {
+  max-height: 120px;
 }
 
 .login {
   position: absolute;
-  padding: 50px 80px;
+  padding: 30px 60px;
   text-align: center;
-  box-shadow: 3px 6px 30px 8px rgba(58 58 58 / 15%);
-  right: 15%;
+  box-shadow: 3px 6px 30px 8px rgb(58 58 58 / 15%);
+  background: rgb(0, 52, 134 / 50%);
+  right: 10%;
   bottom: 20%;
   height: 57%;
-  background: rgb(0, 52, 134 / 50%);
   border: 1px solid;
   border-top-color: #56aaff;
   border-left-color: #56aaff;
@@ -65,12 +109,12 @@ section {
 .login p {
   font-size: 18px;
   color: #d7f52b;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .inputbox {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .inputbox input {
@@ -101,7 +145,7 @@ section {
   font-weight: 600;
   border: none;
   font-size: 20px;
-  padding: 18px 8px;
+  padding: 18px 80px;
   text-transform: uppercase;
   border-radius: 50px;
   border-radius: 0 3px 8px 2px rgb(60 60 60 / 30%);
