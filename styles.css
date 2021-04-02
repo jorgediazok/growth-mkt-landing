@@ -10,6 +10,7 @@
 :root {
   --header-height: 3rem;
   --body-color: #f5fffe;
+  --z-fixed: 100;
 }
 
 ul {
@@ -19,39 +20,58 @@ ul {
 
 a {
   text-decoration: none;
+  color: #efff93 !important;
+  font-size: 1.4rem;
+}
+
+.bd-container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
 }
 
 .nav {
-  max-width: 968px;
+  max-width: 1200px;
   height: var(--header-height);
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
 
 .nav__logo,
 .nav__toggle {
   color: var(--body-color);
+  text-transform: uppercase;
 }
 
 .nav__link {
-  color: var(--first-color-dark);
-  font-weight: var(--font-medium);
+  color: #6f4e37;
 }
 
 .nav__item {
   margin-bottom: 1.5rem;
+  color: #6f4e37;
 }
 
-.nav__toggle {
-  font-size: 1.2rem;
-  cursor: pointer;
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  color: #6f4e37;
 }
 
 section {
   position: relative;
   min-height: 100vh;
-  background-image: url('./assets/coffee3.jpg');
+  background-image: url('./assets/coffee5.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -62,14 +82,15 @@ section {
 }
 
 .promotext {
-  padding-top: 24%;
-  color: #ddedff;
-  text-shadow: 1px 1px 11px #022e77;
+  padding-top: 23%;
+  color: #efff93;
+  text-shadow: 2px 1px 11px #6f4e37;
 }
 
 .promotext h3 {
-  font-size: 5.5rem;
+  font-size: 5rem;
   line-height: 1;
+  text-shadow: 2px 1px 11px #6f4e37;
 }
 
 .promotext p {
@@ -103,12 +124,12 @@ section {
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #d7f52b;
+  color: #efff93;
 }
 
 .login p {
   font-size: 18px;
-  color: #d7f52b;
+  color: #efff93;
   margin-bottom: 50px;
 }
 
@@ -121,7 +142,8 @@ section {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 2px;
-  color: #eff9ff;
+  color: #6f4e37;
+
   border: none;
   border-bottom: 1px solid #abe0ff;
   background-color: transparent;
@@ -140,8 +162,8 @@ section {
 .button {
   position: relative;
   cursor: pointer;
-  background: #d7f52b;
-  color: #022e79;
+  background-color: #efff93;
+  color: #6f4e37;
   font-weight: 600;
   border: none;
   font-size: 20px;
@@ -156,4 +178,51 @@ section {
 .button:hover {
   background-color: #cfee21;
   box-shadow: 0 3px 8px 2px rgb(99 99 99 / 30%);
+}
+
+.button2 {
+  position: relative;
+  cursor: pointer;
+  background-color: #efff93;
+  color: #6f4e37;
+  font-weight: 600;
+  border: none;
+  font-size: 20px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border-radius: 0 3px 8px 2px rgb(60 60 60 / 30%);
+  margin-top: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button2:hover {
+  background-color: #6f4e37;
+  color: #efff93;
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+  .nav__link {
+    color: var(--body-color);
+  }
+  .nav__toggle {
+    display: none;
+  }
 }
